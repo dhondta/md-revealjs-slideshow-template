@@ -1,0 +1,13 @@
+{
+    "meta":{
+        "name":"Agenda",
+        "author":"John Doe",
+        "version":"1.0"
+    },
+    "format":"node_array",
+    "data":[
+        {"id":"root", "isroot":true, "topic":"Section 2"},
+        {"id":"sub1", "parentid":"root", "topic":"Subsection"},
+        {"id":"sub11", "parentid":"sub1", "topic":"Image"}
+    ]
+}

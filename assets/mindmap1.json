@@ -1,0 +1,18 @@
+{
+    "meta":{
+        "name":"Agenda",
+        "author":"John Doe",
+        "version":"1.0"
+    },
+    "format":"node_array",
+    "data":[
+        {"id":"root", "isroot":true, "topic":"This slideshow"},
+        {"id":"sub1", "parentid":"root", "topic":"Introduction", "expanded": false},
+        {"id":"sub11", "parentid":"sub1", "topic":"Objectives"},
+        {"id":"sub2", "parentid":"root", "topic":"Section 1"},
+        {"id":"sub3", "parentid":"root", "topic":"Section 2"},
+        {"id":"sub4", "parentid":"root", "topic":"Section 3"},
+        {"id":"sub5", "parentid":"root", "topic":"Exploitation", "expanded": false},
+        {"id":"sub51", "parentid":"sub5", "topic":"Objectives"}
+    ]
+}

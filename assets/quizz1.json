@@ -1,0 +1,16 @@
+[{
+    "question": "Who is the man smashing Robin's head on the previous image ?",
+    "choices": [
+        "Spiderman",
+        "Batman",
+        "Superman"
+    ],
+    "answer": 1
+},{
+    "question": "Is Reveal.js awesome ?",
+    "choices": [
+        "True",
+        "False"
+    ],
+    "answer": 0
+}]

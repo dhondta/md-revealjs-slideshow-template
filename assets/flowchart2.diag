@@ -1,0 +1,8 @@
+st=>start: Start
+s1=>subroutine: Step 1|done
+s2=>subroutine: Step 2|current
+s3=>subroutine: Step 3|future
+e=>end: End
+
+st->s1->s2->s3->e
+st(right)->s1->s2(right)->s3->e

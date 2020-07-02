@@ -1,0 +1,16 @@
+[{
+    "question": "Is it the last slide ?",
+    "choices": [
+        "False",
+        "True"
+    ],
+    "answer": 0
+},{
+    "question": "What did I say just before ?",
+    "choices": [
+        "Something stupid",
+        "Nothing",
+        "Questions ?"
+    ],
+    "answer": 2
+}]
