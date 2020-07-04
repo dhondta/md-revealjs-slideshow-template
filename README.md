@@ -1,8 +1,8 @@
 # Markdown Reveal.js Slideshow Template
 
-This template allows to make a Reveal.js slideshow from a Markdown file with the [related plugin](https://revealjs.com/markdown/) using extensions relying on [Chart.js](https://www.chartjs.org/), [Flowchart.js](https://flowchart.js.org/), [JSMind](https://hizzgdev.github.io/jsmind/) and other Javascript plugins.
+This template allows to make a [Reveal.js](https://revealjs.com/) slideshow from a Markdown file with the [related plugin](https://revealjs.com/markdown/) using extensions relying on [Chart.js](https://www.chartjs.org/), [Flowchart.js](https://flowchart.js.org/), [JSMind](https://hizzgdev.github.io/jsmind/) and other Javascript plugins.
 
-It still uses XMLHTTPRequests to get contents from the extensions and requires to disable the *Strict Origin Policy* for file URI's in the browser to work. In Firefox, this is done by setting `security.fileuri.strict_origin_policy` to `false` in the `about:config` page.
+It still uses XMLHTTPRequests to get contents from the extensions and requires to disable the *Strict Origin Policy* for file URI's in the browser to work. In Firefox, this is done by setting `security.fileuri.strict_origin_policy` to `false` in the [`about:config`](about:config) page.
 
 ## Quickstart
 
