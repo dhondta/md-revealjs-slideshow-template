@@ -1,102 +1,105 @@
 <!doctype html>
-<html>
+<html lang="en">
 	<head>
-        <base target="_parent" />
 		<meta charset="utf-8">
+		
+		<title>My Slideshow</title>
+        
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="John Doe">
+		
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-		<meta name="author" content="Alexandre D'Hondt">
-		<title>Introduction</title>
-		<link rel="stylesheet" href="css/reveal.css">
- 		<link rel="stylesheet" href="css/tooltip.css">
-		<link rel="stylesheet" href="css/theme/sky.css" id="theme">
-        <link rel="stylesheet" href="css/font-awesome.min.css">
-        <link rel="stylesheet" href="css/customizations.css">
-   	<!-- Code syntax highlighting -->
-		<link rel="stylesheet" href="css/zenburn.css">
-        <script src="js/base/jquery.min.js"></script>
-		<script src="js/extra/raphael.min.js"></script>
-        <script src="js/extra/flowchart.min.js"></script>
-        <script src="js/extra/jsmind.js"></script>
-        <script src="js/extra/chart.js"></script>
-        <script src="js/extra/csv2chart.js"></script>
-        <script src="js/flowchart-options.js"></script>
-        <script src="js/jsmind-options.js"></script>
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName('head')[0].appendChild(link);
-		</script>
+
+		<link rel="stylesheet" href="static/revealjs/dist/reset.css">
+		<link rel="stylesheet" href="static/revealjs/dist/reveal.css">
+		<link rel="stylesheet" href="src/theme/sky.css" id="theme">
+		<link rel="stylesheet" href="static/revealjs/plugin/highlight/monokai.css" id="highlight-theme">
+        <link rel="stylesheet" href="static/revealjs/css/print/paper.css">
+        <link rel="stylesheet" href="static/revealjs/css/print/pdf.css">
+ 		<link rel="stylesheet" href="static/js/plugin/toc-progress/toc-progress.css">
+ 		<link rel="stylesheet" href="static/css/tooltip.css">
+        <link rel="stylesheet" href="static/css/font-awesome.min.css">
+        <link rel="stylesheet" href="static/css/customizations.css">
+		<link rel="stylesheet" href="static/css/zenburn.css">
+        <script src="static/js/base/jquery.min.js"></script>
+		<script src="static/js/mermaid/dist/mermaid.min.js"></script>
+		<script src="static/js/raphael/raphael.min.js"></script>
+        <script src="static/js/flowchartjs/release/flowchart.min.js"></script>
+        <script src="static/js/jsmind/js/jsmind.js"></script>
+        <script src="static/js/extra/chart.js"></script>
+        <script src="static/js/extra/csv2chart.js"></script>
+        <script src="options.js"></script>
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="slides">
-                <section data-markdown="slides.md"
-                         data-separator="^\n-----\n$"
-                         data-separator-vertical="^\n----\n$">
-                </section>
+                <section data-markdown="slides.md" data-separator="^\n-----\n$" data-separator-vertical="^\n----\n$" data-separator-notes="^Note:"></section>
 			</div>
 		</div>
 
-		<script src="js/base/head.min.js"></script>
-		<script src="js/base/reveal.min.js"></script>
+		<script src="src/external/revealjs/dist/reveal.js"></script>
+		<script src="src/external/revealjs/plugin/zoom/zoom.js"></script>
+		<script src="src/external/revealjs/plugin/notes/notes.js"></script>
+		<script src="src/external/revealjs/plugin/search/search.js"></script>
+		<script src="src/external/revealjs/plugin/highlight/highlight.js"></script>
 
 		<script>
 			// More info https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
                 controls: true,
                 progress: true,
-				history: true,
+                hash: true,
+				history: false,
                 center: true,
 
-                transition: 'slide', // 'convex'
-                slideNumber: 'c/t',
-                embedded: true,
+//                transition: 'slide', // 'convex'
+//                slideNumber: 'c/t',
+//                embedded: true,
+                
+                plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealHighlight ],
 
 				// More info https://github.com/hakimel/reveal.js#dependencies
                 // Also see https://theno.github.io/revealjs_template/
 				dependencies: [
-          { src: 'js/base/classList.js', condition: function() { return !document.body.classList; } },
-          { src: 'js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-          { src: 'js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-          { src: 'js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-          { src: 'js/plugin/zoom-js/zoom.js' },
-          { src: 'js/plugin/notes/notes.js', async: true },
-          { src: 'js/plugin/menu/menu.js' },
-          { src: 'js/plugin/title-footer/title-footer.js', async: true, callback: function() { title_footer.initialize(); } },
-          { src: 'js/plugin/toc-progress/toc-progress.js', async: true, callback: function() { toc_progress.initialize(); toc_progress.create(); } },
-          { src: 'js/plugin/flowchart-js/flowchart.js', async: false },
-          { src: 'js/plugin/quizz/quizz.js', async: false },
-          { src: 'js/plugin/jsmind/jsmind.js', async: false },
+                    { src: 'src/external/classlist/classList.min.js', condition: function() { return !document.body.classList; } },
+                    { src: 'src/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'src/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'src/plugin/menu/menu.js' },
+                    { src: 'src/plugin/title-footer/title-footer.js', async: true, callback: function() { title_footer.initialize(); } },
+                    { src: 'src/plugin/toc-progress/toc-progress.js', async: true, callback: function() { toc_progress.initialize(); toc_progress.create(); } },
+                    { src: 'src/plugin/flowchart-js/flowchart.js', async: false },
+                    { src: 'src/plugin/quizz/quizz.js', async: false },
+                    { src: 'src/plugin/jsmind/jsmind.js', async: false },
 				],
-        // plugin menu, cf. https://github.com/denehyg/reveal.js-menu#configuration
-        menu: {
-            side: 'left',
-            numbers: false,
-            titleSelector: 'h1, h2, h3, h4, h5, h6',
-            hideMissingTitles: false,
-            markers: false,
-            custom: false,
-            themes: [
-                { name: 'Black', theme: 'css/theme/black.css' },
-                { name: 'White', theme: 'css/theme/white.css' },
-                { name: 'League', theme: 'css/theme/league.css' },
-                { name: 'Sky', theme: 'css/theme/sky.css' },
-                { name: 'Beige', theme: 'css/theme/beige.css' },
-                { name: 'Simple', theme: 'css/theme/simple.css' },
-                { name: 'Serif', theme: 'css/theme/serif.css' },
-                { name: 'Blood', theme: 'css/theme/blood.css' },
-                { name: 'Night', theme: 'css/theme/night.css' },
-                { name: 'Moon', theme: 'css/theme/moon.css' },
-                { name: 'Solarized', theme: 'css/theme/solarized.css' }
-            ],
-            transitions: true,
-            openButton: true,
-            openSlideNumber: true,
-            keyboard: true
-        }
+                // plugin menu, cf. https://github.com/denehyg/reveal.js-menu#configuration
+                menu: {
+                    side: 'left',
+                    numbers: false,
+                    titleSelector: 'h1, h2, h3, h4, h5, h6',
+                    hideMissingTitles: false,
+                    markers: false,
+                    custom: false,
+                    themes: [
+                        { name: 'Beige', theme: 'src/theme/beige.css' },
+                        { name: 'Black', theme: 'src/theme/black.css' },
+                        { name: 'Blood', theme: 'src/theme/blood.css' },
+                        { name: 'League', theme: 'src/theme/league.css' },
+                        { name: 'Moon', theme: 'src/theme/moon.css' },
+                        { name: 'Night', theme: 'src/theme/night.css' },
+                        { name: 'Serif', theme: 'src/theme/serif.css' },
+                        { name: 'Simple', theme: 'src/theme/simple.css' },
+                        { name: 'Sky', theme: 'src/theme/sky.css' },
+                        { name: 'Solarized', theme: 'src/theme/solarized.css' },
+                        { name: 'White', theme: 'src/theme/white.css' },
+                    ],
+                    transitions: true,
+                    openButton: true,
+                    openSlideNumber: true,
+                    keyboard: true
+                }
 			});
 		</script>
 	</body>

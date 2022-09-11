@@ -1,4 +1,31 @@
-[submodule "revealjs"]
-	path = revealjs
+[submodule "src/external/revealjs"]
+	path = src/external/revealjs
 	url = https://github.com/hakimel/reveal.js
 	branch = master
+[submodule "src/external/menu"]
+	path = src/external/menu
+	url = https://github.com/denehyg/reveal.js-menu
+[submodule "src/external/toc-progress"]
+	path = src/external/toc-progress
+	url = https://github.com/e-gor/Reveal.js-TOC-Progress
+[submodule "src/external/title-footer"]
+	path = src/external/title-footer
+	url = https://github.com/e-gor/Reveal.js-Title-Footer
+[submodule "src/external/classlist"]
+	path = src/external/classlist
+	url = https://github.com/eligrey/classList.js
+[submodule "src/external/raphael"]
+	path = src/external/raphael
+	url = https://github.com/DmitryBaranovskiy/raphael.git
+[submodule "src/external/mermaid"]
+	path = src/external/mermaid
+	url = https://github.com/mermaid-js/mermaid
+[submodule "src/external/jsmind"]
+	path = src/external/jsmind
+	url = https://github.com/hizzgdev/jsmind
+[submodule "src/external/flowchartjs"]
+	path = src/external/flowchartjs
+	url = https://github.com/adrai/flowchart.js
+[submodule "src/external/revealjs-plugins"]
+	path = src/external/revealjs-plugins
+	url = https://github.com/rajgoel/reveal.js-plugins
